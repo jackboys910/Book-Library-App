@@ -16,10 +16,13 @@ const filterSlice = createSlice({
       // текущего объекта state
       // так что с reduxSlices можно изменять текущее состояние
     },
+    resetFilters: (state) => {
+      return initialState
+    },
   },
 })
 
-export const { setTitleFilter } = filterSlice.actions
+export const { setTitleFilter, resetFilters } = filterSlice.actions
 
 export const selectTitleFilter = (state) => state.filter.title
 
